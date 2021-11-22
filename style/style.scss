@@ -1,0 +1,89 @@
+body {
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+#nav {
+  padding-left: 10px;
+}
+
+.cover {
+  height: 30vh;
+
+  background-image: url("../images/photgrapher.jpg");
+  background-size: cover;
+
+  h1 {
+    color: white;
+  }
+}
+
+.service {
+  text-align: center;
+
+  .col-12 {
+    img {
+      width: 100%;
+      height: 80%;
+    }
+  }
+
+  .projects {
+    .album {
+      #album-1,
+      #album-2,
+      #album-3 {
+        img {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  height: 10vh;
+  background-color: black;
+  color: white;
+
+  .icons {
+    color: white;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .cover {
+    height: 50vh;
+  }
+
+  .projects {
+    .album {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      #album-1 {
+        grid-row: 1/2;
+        grid-column: 1/3;
+      }
+      #album-2 {
+        grid-row: 1/2;
+        grid-column: 3/4;
+      }
+      #album-3 {
+        grid-row: 2/3;
+        grid-column: 1/4;
+        align-items: center;
+      }
+    }
+  }
+
+  .contact {
+    text-align: center;
+    height: 15vh;
+    background-color: black;
+  }
+}
